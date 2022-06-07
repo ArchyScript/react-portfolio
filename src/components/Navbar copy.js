@@ -4,8 +4,12 @@ import { Link } from 'react-router-dom'
 
 function Navbar() {
   var [isOpen, setIsOpen] = useState(false)
+  var [currentActive, setActiveNavLink] = useState('')
+  // var [scrollShadowBoolean, handleScroll] = useState(false)
   var scrollShadowBoolean = true
   var navbarTogglerIsOpenBoolean = false
+
+  window.addEventListener('scroll', () => handleScroll())
 
   const handleScroll = () => {
     if (window.pageYOffset > 0) {
@@ -17,56 +21,74 @@ function Navbar() {
     }
   }
 
-  const navigation_links = [
+  const nav_links = [
     { name: 'Dashboard', href: '#', current: true },
-    { name: 'Team', href: '#', current: false },
+    { name: 'About', href: '#', current: false },
     { name: 'Projects', href: '#', current: false },
-    { name: 'Calendar', href: '#', current: false },
+    // { name: 'Calendar', href: '#', current: false },
   ]
-  // const handleClick = () => {
-  //   navigation_links.forEach((nav_link) => {
-  //     nav_link.current = false
-
-  //     nav_link.onclick = () => {}
-  //   })
-
-  //   // console.log(e)
-  // }
-
-  const nav_link = navigation_links.map((product) => (
-    <a
-      className={
-        'cursor-pointer' +
-        (product.current
-          ? 'hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium'
-          : 'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium')
-      }
-      key={product.name}
-    >
-      {/* onClick={handleClick} */}
-      {product.name}
-    </a>
-  ))
-
-  // navigation_links.forEach((nav_link) => {})
-  // <div className={"btn-group pull-right " + (this.props.showBulkActions ? 'show' : 'hidden')}>
 
   return (
-    <nav className="fixed top-0 w-full shadow-md bg-gray-800">
+    <nav
+      className={
+        '' + scrollShadowBoolean
+          ? 'fixed z-50 top-0 w-full bg-gray-800 shadow-xl'
+          : 'fixed z-50 top-0 w-full bg-gray-800 shadow-sm'
+      }
+    >
       <div className="container w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center   justify-between h-16">
           <div className="flex flex-1 items-center justify-between">
             <div className="flex-shrink-0">
-              <img
-                className="h-8 w-8"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                alt="Workflow"
-              />
+              <a href="#" className="flex items-center  mb-0">
+                <img
+                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                  className="mr-3 h-8 App-logo"
+                  alt="Flowbite Logo"
+                />
+                <span className="hidden sm:inline self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                  ArchyScript
+                </span>
+              </a>
             </div>
 
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                {nav_link}
+                <a
+                  href="#welcome"
+                  className={
+                    'cursor-pointer hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium' +
+                      currentActive !==
+                    'dashboard'
+                      ? 'text-white'
+                      : 'text-blue-500'
+                  }
+                  onClick={() => setActiveNavLink('dashboard')}
+                >
+                  Dashboard
+                </a>
+
+                <a
+                  href="#about"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  About
+                </a>
+
+                <a
+                  href="#"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  onClick={() => setActiveNavLink('projects')}
+                >
+                  Projects
+                </a>
+
+                <a
+                  href="#"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  Calendar
+                </a>
               </div>
             </div>
           </div>

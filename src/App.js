@@ -1,13 +1,11 @@
 import './App.css'
 import React from 'react'
 import Navbar from './components/Navbar'
-import Welcome from './components/Welcome'
 import Footer from './components/Footer'
-// import Example from './components/Welcome copy'
-import Contact from './components/Contact'
-import Portfolio from './components/Projects'
-import About from './components/About'
-import Technologies from './components/Technologies'
+import HomePage from './components/HomePage'
+import AllProjects from './components/AllProjects'
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
@@ -16,19 +14,13 @@ function App() {
         <Navbar />
       </header>
 
-      <main className=" md:pt-16">
-        <Welcome />
-
-        <About />
-
-        <Technologies />
-
-        <Portfolio />
-
-        <Contact />
-
-        {/* <Example /> */}
-      </main>
+      {/* <HomePage /> */}
+      <Routes>
+        {['/', '/home'].map((path) => (
+          <Route path={path} element={<HomePage />} />
+        ))}
+        <Route path="/projects" element={<AllProjects />} />
+      </Routes>
 
       <footer>
         <Footer />

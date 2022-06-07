@@ -6,26 +6,26 @@ const Contact = () => {
   }
 
   return (
-    <section className="bg-gray-50 pt-20 pb-32 shadow-md">
+    <section id="contact" className="bg-gray-50 py-32">
       <div className="flex justify-center lg:text-5xl mb-16 ">
-        <h1 className=" relative w-auto text-4xl tracking-tight font-extrabold text-gray-900 lg:text-5xl ">
-          <span className="block text-indigo-600  pb-6 ">Contact</span>
-          <span className="absolute w-2/5 left-0 bottom-0 h-2  rounded-xl bg-indigo-600 "></span>
+        <h1 className=" relative w-auto text-4xl tracking-tight font-bold sm:font-extrabold text-gray-900 lg:text-5xl ">
+          <span className="block text-indigo-600  pt-2 sm:pt-4 ">
+            Contact Me
+          </span>
+          <span className="absolute w-2/5 left-0 top-0 h-1 sm:h-2  rounded-xl bg-indigo-600 "></span>
         </h1>
       </div>
 
-      <div className="grid gap-12 grid-cols-2 container ">
+      <div className="grid  gap-6 lg:gap-12 grid-cols-2 container  px-4 sm:px-10 ">
         <div className="col-span-2 md:col-span-1 flex flex-1 rounded-xl">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.4780243331024!2d4.514757714131398!3d7.522723112828835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10383121b271345d%3A0x849b0d4f6592cedc!2sDepartment%20of%20Architecture%20OAU!5e0!3m2!1sen!2sng!4v1654473330142!5m2!1sen!2sng"
-            width="600"
-            height="450"
             loading="lazy"
-            className="rounded-md  h-auto"
+            className="rounded-md h-auto sm:h-64 w-full md:h-auto"
           ></iframe>
         </div>
 
-        <div className="bg-r ed-500 col-span-2 md:col-span-1 px-4">
+        <div className="bg-r ed-500 col-span-2 md:col-span-1 ">
           <form
             onSubmit={sendMessage}
             className="w-full  flex justify-start flex-col"

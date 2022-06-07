@@ -25,6 +25,11 @@ code {
 }
 
 
+/* .active {
+    @apply bg-slate-600 text-gray-100;
+} */
+
+
 /* .App-header {
     background-color: #282c34;
     min-height: 100vh;

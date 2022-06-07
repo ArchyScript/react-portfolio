@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Transition } from '@headlessui/react'
 import { Link } from 'react-router-dom'
 
@@ -7,7 +7,6 @@ function Navbar() {
   var [currentActive, setActiveNavLink] = useState('')
   // var [scrollShadowBoolean, handleScroll] = useState(false)
   var scrollShadowBoolean = true
-  var navbarTogglerIsOpenBoolean = false
 
   window.addEventListener('scroll', () => handleScroll())
 
@@ -23,9 +22,9 @@ function Navbar() {
 
   const nav_links = [
     { name: 'Dashboard', href: '#', current: true },
-    { name: 'Team', href: '#', current: false },
-    { name: 'Projects', href: '#', current: false },
-    { name: 'Calendar', href: '#', current: false },
+    { name: 'About', href: '#about', current: false },
+    { name: 'Projects', href: '#projects', current: false },
+    { name: 'Contact', href: '#contact', current: false },
   ]
 
   return (
@@ -54,7 +53,17 @@ function Navbar() {
 
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <a
+                {nav_links.map((nav_link, index) => (
+                  <a
+                    href={nav_link.href}
+                    key={`${nav_link}_${index}`}
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    {nav_link.name}
+                  </a>
+                ))}
+
+                {/* <a
                   href="#welcome"
                   className={
                     'cursor-pointer hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium' +
@@ -88,7 +97,7 @@ function Navbar() {
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Calendar
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

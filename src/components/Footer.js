@@ -2,9 +2,12 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="p-4 bg-gray-800  shadow md:px-6 md:py-8 dark:bg-gray-800">
-      <div className="sm:flex sm:items-center sm:justify-between container">
-        <a href="#" className="flex items-center mb-4 sm:mb-0">
+    <footer className="p-4 sm:py-8 bg-gray-800 shadow md:px-6 md:py-8 dark:bg-gray-800">
+      <div className="md:flex md:items-center md:justify-between container md:px-6">
+        <a
+          href="#"
+          className="flex justify-center md:justify-start items-center mb-6 sm:mb-8 md:mb-0 "
+        >
           <img
             src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
             className="mr-3 h-8 App-logo"
@@ -15,7 +18,7 @@ const Footer = () => {
           </span>
         </a>
 
-        <ul className="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400 space-x-2">
+        <ul className="flex flex-wrap items-center justify-center md:justify-start text-sm text-gray-500 dark:text-gray-400 space-x-2 gap-y-4">
           <li>
             <a
               href="#"
@@ -60,11 +63,11 @@ const Footer = () => {
 
       <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
 
-      <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400 container">
+      <span className="block text-sm text-gray-500 text-center dark:text-gray-400 container  px-4 sm:px-10">
         <span className="text-base ">© 2022 </span>
         <a
           href="#"
-          className="hover:underline cursor-pointer text-gray-400 text-base hover:text-white   font-medium"
+          className="cursor-pointer text-gray-400 text-base hover:text-white   font-medium"
         >
           ArchyScript™
         </a>

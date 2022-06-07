@@ -2,10 +2,10 @@ import React from 'react'
 
 const Welcome = () => {
   return (
-    <section className="mb-16">
+    <section>
       {/* mobile view */}
       <div
-        className="block md:hidden bg-opacity-50 "
+        className="block md:hidden bg-opacity-50"
         style={{
           backgroundImage:
             "url('https://images.pexels.com/photos/34153/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350')",
@@ -14,22 +14,18 @@ const Welcome = () => {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <main className=" w-full  bg-white opacity-90  h-full mx-auto  col-span-2 md:col-span-1  p-4  sm:p-12  ">
-          <div className="sm:text-center lg:text-left">
+        <main className=" w-full bg-gray-50 opacity-90  h-full mx-auto  col-span-2 md:col-span-1  py-24  sm:py-28">
+          <div className="text-center">
             <h1 className="text-3xl sm:text-4xl tracking-tight font-extrabold text-gray-900 ">
-              <span className="block xl:inline text-gray-700">
-                Hello there 😃!
-              </span>{' '}
-              <span className="block text-indigo-600 xl:inline">
-                Dasaolu Daniel
-              </span>
+              <span className="blocktext-gray-700">Hello there 😃!</span>{' '}
+              <span className="block text-indigo-600 ">Dasaolu Daniel</span>
             </h1>
 
-            <p className=" text-base text-gray-700 mt-4 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:text-2xl lg:mx-0">
+            <p className=" text-base text-gray-700 mt-4 sm:mt-5 w-5/6  sm:max-w-xl mx-auto">
               I'm a Front End Developer I'm a web developer with a focus on the
-              MERN stack, but still exploring other technologies and frameworks
-              that catch my interest! if you're looking for a developer to add
-              to your team, I'd love to hear from you!
+              MERN and MEVN stack, but still exploring other technologies and
+              frameworks that catch my interest! if you're looking for a
+              developer to add to your team, I'd love to hear from you!
             </p>
 
             <div className="mt-5 sm:mt-8 flex justify-center">
@@ -47,8 +43,8 @@ const Welcome = () => {
       </div>
 
       {/* medium size and desktop mode */}
-      <div className="bg-gray-50 py-14 lg:py-20 ">
-        <div className="hidden md:grid gap-12 grid-cols-2 container">
+      <div className="bg-gray-50 py-32 hidden md:block ">
+        <div className="grid gap-12 grid-cols-2 container">
           <main className=" mx-auto  col-span-2 md:col-span-1  px-4  sm:px-6  lg:px-8 ">
             <div className="text-left">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 lg:text-5xl">
