@@ -19,6 +19,7 @@ const Contact = () => {
       <div className="grid  gap-6 lg:gap-12 grid-cols-2 container  px-4 sm:px-10 ">
         <div className="col-span-2 md:col-span-1 flex flex-1 rounded-xl">
           <iframe
+            title="My location on map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.4780243331024!2d4.514757714131398!3d7.522723112828835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10383121b271345d%3A0x849b0d4f6592cedc!2sDepartment%20of%20Architecture%20OAU!5e0!3m2!1sen!2sng!4v1654473330142!5m2!1sen!2sng"
             loading="lazy"
             className="rounded-md h-auto sm:h-64 w-full md:h-auto"

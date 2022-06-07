@@ -59,7 +59,7 @@ const Projects = () => {
                 setTech(eachTech.title)
               }}
               className={
-                current_tech == eachTech.title
+                current_tech === eachTech.title
                   ? techClasses.active
                   : techClasses.inactive
               }
