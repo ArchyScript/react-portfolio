@@ -1,8 +1,92 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
-  const sendMessage = (e) => {
+  const [displayMessage, setMessageAndStatus] = useState({
+    is_success: false,
+    message: '',
+  })
+  const messageClass = {
+    success:
+      'px-4 text-center flex-wrap text-green-700 font-medium mb-6 text-sm sm:text-lg',
+    error:
+      'text-center px-4 flex-wrap text-red-600 text-sm font-medium  mb-6 text-sm sm:text-lg',
+  }
+
+  const form = useRef()
+
+  const setErrorTimeout = (event) => {
+    setTimeout(() => {
+      setMessageAndStatus({
+        is_success: false,
+        message: '', 
+      })
+    }, 4000)
+
+    if (event === 'success') {
+      document.getElementById('fullname').value = ''
+      document.getElementById('email').value = ''
+      document.getElementById('message').value = ''
+    }
+  }
+
+  const sendEmail = (e) => {
     e.preventDefault()
+
+    let regexEmail = '/^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/'
+    let fullname = document.getElementById('fullname').value
+    let email = document.getElementById('email').value
+    let message = document.getElementById('message').value
+
+    if (!fullname || !email || !message) {
+      setMessageAndStatus({
+        is_success: false,
+        message: 'Kindly fill every field available',
+      })
+      return setErrorTimeout()
+    }
+
+    if (!email.match(regexEmail)) {
+      setMessageAndStatus({
+        is_success: false,
+        message: 'Email must be valid',
+      })
+      return setErrorTimeout()
+    }
+    if (message.length <= 10) {
+      setMessageAndStatus({
+        is_success: false,
+        message: 'Message must be more than 10 character',
+      })
+      return setErrorTimeout()
+    }
+
+    let SERVICE_ID = 'service_b6xxwsr'
+    let TEMPLATE_ID = 'template_2zgwkid'
+    let PUBLIC_KEY = 'user_fWc4DiIEXOB22gp3YINne'
+
+    // let SERVICE_ID = process.env.SERVICE_ID
+    // let TEMPLATE_ID = process.env.TEMPLATE_ID
+    // let PUBLIC_KEY = process.env.PUBLIC_KEY
+
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
+      (result) => {
+        setMessageAndStatus({
+          is_success: true,
+          message: 'Thanks for contacting me, I will reply as soon as possible',
+        })
+
+        return setErrorTimeout('success')
+      },
+      (error) => {
+        setMessageAndStatus({
+          is_success: false,
+          message: 'Ooops! an error occured... Check your network connection',
+        })
+
+        return setErrorTimeout()
+      },
+    )
   }
 
   return (
@@ -28,17 +112,28 @@ const Contact = () => {
 
         <div className="bg-r ed-500 col-span-2 md:col-span-1 ">
           <form
-            onSubmit={sendMessage}
+            ref={form}
+            onSubmit={sendEmail}
             className="w-full  flex justify-start flex-col"
           >
+            <span
+              className={
+                displayMessage.is_success
+                  ? messageClass.success
+                  : messageClass.error
+              }
+            >
+              {displayMessage.message}
+            </span>
             <div className="p-1 mb-3">
               <label className="block mb-2 mx-2  text-base text-left  sm:text-lg font-semibold text-gray-600">
                 Fullname{' '}
               </label>
               <input
+                id="fullname"
                 type="text"
                 className="block border border-gray-200 rounded-xl w-full py-4 px-6  outline-none"
-                name="text"
+                name="user_fullname"
                 placeholder="Fullname"
               />
             </div>
@@ -48,9 +143,10 @@ const Contact = () => {
                 Email{' '}
               </label>
               <input
-                type="email"
+                id="email"
+                type="text"
                 className="block border border-gray-200 rounded-xl w-full py-4 px-6  outline-none"
-                name="email"
+                name="user_email"
                 placeholder="Email"
               />
             </div>
@@ -61,6 +157,8 @@ const Contact = () => {
               </label>
               <div className="h-full">
                 <textarea
+                  id="message"
+                  name="message"
                   className="block border border-gray-200 py-4 px-6  outline-none rounded-lg resize-none w-full h-full"
                   placeholder="Please send a message..."
                 ></textarea>

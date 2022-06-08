@@ -5,9 +5,7 @@ import { Link } from 'react-router-dom'
 function Navbar() {
   var [isOpen, setIsOpen] = useState(false)
   var [currentActive, setActiveNavLink] = useState('')
-  // var [scrollShadowBoolean, handleScroll] = useState(false)
   var scrollShadowBoolean = true
-  var navbarTogglerIsOpenBoolean = false
 
   window.addEventListener('scroll', () => handleScroll())
 

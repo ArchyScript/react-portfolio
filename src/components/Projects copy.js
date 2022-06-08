@@ -7,13 +7,7 @@ const Portfolio = () => {
   const [filteredProjects, setFilteredProject] = useState('all')
   const allLanguageAndFrameworks = 5
 
-  const handleSelect = () => {
-    console.log('selcete')
-  }
-
-  useEffect(() => {
-    console.log(tech)
-  }, [tech])
+  useEffect(() => {}, [tech])
 
   const filterTechs = (tech_title) => {
     setTech(tech_title)

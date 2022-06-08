@@ -1,5 +1,4 @@
 import React from 'react'
-import ts from '../assets/ts.png'
 import { languagesAndFrameworks } from '../db/db'
 
 const Technologies = () => {

@@ -20,7 +20,7 @@ const Projects = () => {
       <div className="grid gap-6 lg:gap-12 grid-cols-1 md:grid-cols-2 container rounded-xl px-4 sm:px-10">
         {projects.map(
           (project, index) =>
-            index <= 2 && (
+            index <= 3 && (
               <div
                 key={`${project}_${index}`}
                 className="relative border-none shadow-md pb-12 shadow-indigo-400 hover:shadow-lg hover:shadow-indigo-600 flex flex-col rounded-xl"

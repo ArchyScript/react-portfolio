@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Transition } from '@headlessui/react'
 import { Link } from 'react-router-dom'
 
 function Navbar() {
   var [isOpen, setIsOpen] = useState(false)
-  var [currentActive, setActiveNavLink] = useState('')
   // var [scrollShadowBoolean, handleScroll] = useState(false)
   var scrollShadowBoolean = true
 
@@ -21,7 +20,7 @@ function Navbar() {
   }
 
   const nav_links = [
-    { name: 'Dashboard', href: '#', current: true },
+    { name: 'Home', href: '#', current: true },
     { name: 'About', href: '#about', current: false },
     { name: 'Projects', href: '#projects', current: false },
     { name: 'Contact', href: '#contact', current: false },
@@ -38,18 +37,18 @@ function Navbar() {
       <div className="container w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center   justify-between h-16">
           <div className="flex flex-1 items-center justify-between">
-            <div className="flex-shrink-0">
-              <a href="#" className="flex items-center  mb-0">
-                <img
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                  className="mr-3 h-8 App-logo"
-                  alt="Flowbite Logo"
-                />
-                <span className="hidden sm:inline self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  ArchyScript
-                </span>
-              </a>
-            </div>
+            {/* <div className="flex-shrink-0"> */}
+            <Link to="/" className="flex flex-shrink-0 items-center  mb-0">
+              <img
+                src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                className="mr-3 h-8 App-logo"
+                alt="Flowbite Logo"
+              />
+              <span className="hidden sm:inline self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                ArchyScript
+              </span>
+            </Link>
+            {/* </div> */}
 
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
@@ -62,42 +61,6 @@ function Navbar() {
                     {nav_link.name}
                   </a>
                 ))}
-
-                {/* <a
-                  href="#welcome"
-                  className={
-                    'cursor-pointer hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium' +
-                      currentActive !==
-                    'dashboard'
-                      ? 'text-white'
-                      : 'text-blue-500'
-                  }
-                  onClick={() => setActiveNavLink('dashboard')}
-                >
-                  Dashboard
-                </a>
-
-                <a
-                  href="#about"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  About
-                </a>
-
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  onClick={() => setActiveNavLink('projects')}
-                >
-                  Projects
-                </a>
-
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  Calendar
-                </a> */}
               </div>
             </div>
           </div>
@@ -161,41 +124,15 @@ function Navbar() {
         {(ref) => (
           <div className="md:hidden" id="mobile-menu">
             <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a
-                href="#"
-                className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Dashboard
-              </a>
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-gray-700
-                  hover:text-white block px-3 py-2 rounded-md text-base
-                  font-medium"
-              >
-                Team
-              </a>
-
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Projects
-              </a>
-
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Calendar
-              </a>
-
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Reports
-              </a>
+              {nav_links.map((nav_link, index) => (
+                <a
+                  href={`/${nav_link.href}`}
+                  key={`${nav_link}_${index}`}
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  {nav_link.name}
+                </a>
+              ))}
             </div>
           </div>
         )}

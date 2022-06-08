@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Welcome = () => {
   return (
@@ -30,12 +31,12 @@ const Welcome = () => {
 
             <div className="mt-5 sm:mt-8 flex justify-center">
               <div className="rounded-md shadow">
-                <a
-                  href="#contact"
+                <Link
+                  to="#contact"
                   className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                 >
                   Contact Now
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -63,12 +64,12 @@ const Welcome = () => {
 
               <div className="mt-5 sm:mt-8 sm:flex justify-start">
                 <div className="rounded-md shadow">
-                  <a
-                    href="#"
+                  <Link
+                    to="/"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 "
                   >
                     Contact Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

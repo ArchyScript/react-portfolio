@@ -7,40 +7,41 @@ const Projects = () => {
   const [filteredProjects, setFilteredProject] = useState(projects)
   const [techClasses, setActiveClass] = useState({
     active:
-      'cursor-pointer bg-gray-600 text-gray-50 px-3 py-2 rounded-md text-sm font-medium shadow-lg',
+      'cursor-pointer select-none bg-gray-600 text-gray-50 px-3 py-2 rounded-md text-sm font-medium',
     inactive:
-      'cursor-pointer bg-gray-50 text-gray-700 px-3 py-2 rounded-md text-sm font-medium',
+      'cursor-pointer select-none bg-gray-50 text-gray-700 px-3 py-2 rounded-md text-sm font-medium',
   })
 
   useEffect(() => {
-    filterProject()
-  }, [current_tech])
+    const filterProject = () => {
+      if (current_tech === 'All') return setFilteredProject(projects)
+      const displayProjects = []
 
-  const filterProject = () => {
-    if (current_tech === 'All') return setFilteredProject(projects)
-    const displayProjects = []
-
-    for (
-      let all_project_index = 0;
-      all_project_index < projects.length;
-      all_project_index++
-    ) {
-      let techs = projects[all_project_index].techs
       for (
-        let all_tech_per_project_index = 0;
-        all_tech_per_project_index < techs.length;
-        all_tech_per_project_index++
+        let all_project_index = 0;
+        all_project_index < projects.length;
+        all_project_index++
       ) {
-        if (techs[all_tech_per_project_index] == current_tech) {
-          displayProjects.push(projects[all_project_index])
+        let techs = projects[all_project_index].techs
+        for (
+          let all_tech_per_project_index = 0;
+          all_tech_per_project_index < techs.length;
+          all_tech_per_project_index++
+        ) {
+          if (techs[all_tech_per_project_index] === current_tech) {
+            displayProjects.push(projects[all_project_index])
+          }
         }
       }
+      setFilteredProject(displayProjects)
     }
-    setFilteredProject(displayProjects)
-  }
+
+    filterProject()
+    setActiveClass(techClasses)
+  }, [current_tech, techClasses])
 
   return (
-    <section className="bg-white py-32 shadow-md">
+    <section className="bg-white py-32 pb -80 shadow-md">
       <div className="flex flex-col justify-center lg:text-5xl mb-16 container">
         <div className="flex justify-center  mb-6 md:mb-8">
           <h1 className=" relative w-auto text-4xl tracking-tight font-bold sm:font-extrabold text-gray-900 lg:text-5xl ">
@@ -51,7 +52,7 @@ const Projects = () => {
           </h1>
         </div>
 
-        <div className="flex items-baseline justify-center flex-wrap  space-x-1 sm:space-x-2 lg:space-x-3 space-y-1  sm:space-y-2">
+        <div className="flex items-baseline justify-center flex-wrap  space-x-1 sm:space-x-2 lg:space-x-3 space-y-1 px-4 sm:px-8 sm:space-y-2">
           {techs.map((eachTech, index) => (
             <span
               key={index}
@@ -70,7 +71,7 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="grid gap-6 lg:gap-12 grid-cols-1 md:grid-cols-2 container rounded-xl px-4 sm:px-10">
+      <div className="grid gap-6 lg:gap-12 grid-cols-1 md:grid-cols-2 xl:gr id-cols-3 container rounded-xl px-4 sm:px-10">
         {filteredProjects.map((project, index) =>
           filteredProjects.length >= 0 ? (
             <div

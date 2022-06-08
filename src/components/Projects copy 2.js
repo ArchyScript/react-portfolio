@@ -11,10 +11,6 @@ const Projects = () => {
   const [filteredProjects, setFilteredProject] = useState(projects)
   const allLanguageAndFrameworks = 5
 
-  const handleSelect = () => {
-    console.log('selcete')
-  }
-
   const setClassNameFunction = () => {
     techs.forEach((tech) => {})
   }
@@ -41,13 +37,10 @@ const Projects = () => {
       }
     }
     setFilteredProject(displayProjects)
-    console.log(displayProjects.length)
 
     if (displayProjects.length >= 1) {
-      console.log('test moe')
       setAtLeastSingleProjectBoolean(true)
     } else {
-      console.log('test nomore')
       setAtLeastSingleProjectBoolean(false)
     }
     // if (displayProjects !== []) {

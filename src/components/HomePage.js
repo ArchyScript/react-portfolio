@@ -7,7 +7,7 @@ import Technologies from './Technologies'
 
 function HomePage() {
   return (
-    <div className="">
+    <div className="pb -64 sm:pb -48">
       <Welcome />
 
       <About />

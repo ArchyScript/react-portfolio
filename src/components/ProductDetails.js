@@ -7,9 +7,6 @@ const Portfolio = () => {
   const allLanguageAndFrameworks = 5
 
   const techs = 4
-  const handleSelect = () => {
-    console.log('selcete')
-  }
 
   const clickHandler = () => {
     setName(false)
