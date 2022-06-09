@@ -44,7 +44,7 @@ function Navbar() {
                 className="mr-3 h-8 App-logo"
                 alt="Flowbite Logo"
               />
-              <span className="hidden sm:inline self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              <span className="hidden sm:inline self-center text-2xl font-semibold whitespace-nowrap text-white">
                 ArchyScript
               </span>
             </Link>

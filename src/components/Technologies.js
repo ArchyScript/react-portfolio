@@ -28,7 +28,7 @@ const Technologies = () => {
         </div>
       </div>
 
-      <div className="grid gap-x-4 gap-y-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 container px-4 sm:px-10">
+      <div className="grid gap-x-4 gap-y-2 sm:gap-y-4 lg:gap-y-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 container px-4 sm:px-10">
         {languagesAndFrameworks.map((languagesAndFramework, index) => (
           <div
             key={`${languagesAndFramework}_${index}`}
