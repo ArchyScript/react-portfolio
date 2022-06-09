@@ -110,27 +110,49 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div className="absolute bottom-0 w-full flex justify-between sm:justify-around items-center mt-8 bg-indigo-100 py-3 px-4 rounded-bl-xl rounded-br-xl">
-                  <span className="font-semibold text-xl">
-                    <a
-                      href={project.links.github}
-                      className="cursor-pointer text-gray-600 text-base hover:text-black  px-3 py-2 rounded-md  font-medium"
-                    >
-                      <span>Github</span>
-                      <span className="fab fa-github ml-2"></span>
-                    </a>
-                  </span>
+                {!project.is_client_project && (
+                  <div className="absolute bottom-0 w-full flex justify-between sm:justify-around items-center mt-8 bg-indigo-200 py-3 px-4 rounded-bl-xl rounded-br-xl">
+                    <span className="font-semibold text-xl">
+                      <a
+                        href={project.links.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer text-gray-700 text-base hover:text-black  px-3 py-2 rounded-md  font-medium"
+                      >
+                        <span>Github</span>
+                        <span className="fab fa-github ml-2"></span>
+                      </a>
+                    </span>
 
-                  <span className="font-semibold text-xl">
-                    <a
-                      href={project.links.netlify}
-                      className="cursor-pointer text-gray-600 text-base hover:text-black  px-3 py-2 rounded-md  font-medium"
-                    >
-                      <span>Preview</span>
-                      <span className="fa fa-edit ml-2"></span>
-                    </a>
-                  </span>
-                </div>
+                    <span className="font-semibold text-xl">
+                      <a
+                        href={project.links.netlify}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer text-gray-700 text-base hover:text-black  px-3 py-2 rounded-md  font-medium"
+                      >
+                        <span>Preview</span>
+                        <span className="fa fa-edit ml-2"></span>
+                      </a>
+                    </span>
+                  </div>
+                )}
+
+                {project.is_client_project && (
+                  <div className="absolute bottom-0 w-full flex justify-between sm:justify-around items-center mt-8 bg-indigo-200 py-3 px-4 rounded-bl-xl rounded-br-xl">
+                    <span className="font-semibold text-xl">
+                      <a
+                        href={project.links.netlify}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer text-gray-700 text-base hover:text-black  px-3 py-2 rounded-md  font-medium"
+                      >
+                        <span>Preview</span>
+                        <span className="fa fa-edit ml-2"></span>
+                      </a>
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
           ) : (

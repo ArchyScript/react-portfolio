@@ -1,16 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.93769d63.css",
-    "main.js": "/static/js/main.e65592f3.js",
+    "main.css": "/static/css/main.25ef8aae.css",
+    "main.js": "/static/js/main.2de84571.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/klienty.png": "/static/media/klienty.97b4fc61c3b3ada13460.png",
+    "static/media/vuetify_portfolio.png": "/static/media/vuetify_portfolio.c315cceff3c636328bb6.png",
+    "static/media/netrepeneurs.png": "/static/media/netrepeneurs.e22938418a3abc7fc5a5.png",
+    "static/media/stranerd.png": "/static/media/stranerd.69989533fac4dd564481.png",
+    "static/media/responsive_dashboard.png": "/static/media/responsive_dashboard.03bee69a5b9784172bd1.png",
+    "static/media/virtual_keyboard.png": "/static/media/virtual_keyboard.e60adb492099b347a1b8.png",
+    "static/media/react_portfolio.png": "/static/media/react_portfolio.a190079bc9b04f78b4ea.png",
+    "static/media/promise_card.png": "/static/media/promise_card.93286476afbf9e7ca2be.png",
+    "static/media/quote_generator.png": "/static/media/quote_generator.ab4c574ef7feb23fbdea.png",
+    "static/media/typing_game.png": "/static/media/typing_game.29cb958e07dc8c75c083.png",
+    "static/media/simple_store.png": "/static/media/simple_store.b5c0520aa3c87feafd3b.png",
+    "static/media/simple_calculator.png": "/static/media/simple_calculator.2e13dc321cfedc54b022.png",
+    "static/media/matrix_calculator.png": "/static/media/matrix_calculator.bea8c12c4b4f4416683c.png",
+    "static/media/length_converter.png": "/static/media/length_converter.06226cf7605ffd239b68.png",
+    "static/media/tic_tac_toe.png": "/static/media/tic_tac_toe.247edd009078e5edd479.png",
     "index.html": "/index.html",
     "static/media/vuetify.svg": "/static/media/vuetify.cc3f3f7ab2ed8391148aafa66344c91e.svg",
-    "main.93769d63.css.map": "/static/css/main.93769d63.css.map",
-    "main.e65592f3.js.map": "/static/js/main.e65592f3.js.map",
+    "main.25ef8aae.css.map": "/static/css/main.25ef8aae.css.map",
+    "main.2de84571.js.map": "/static/js/main.2de84571.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93769d63.css",
-    "static/js/main.e65592f3.js"
+    "static/css/main.25ef8aae.css",
+    "static/js/main.2de84571.js"
   ]
 }
