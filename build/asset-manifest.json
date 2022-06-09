@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.25ef8aae.css",
-    "main.js": "/static/js/main.2de84571.js",
+    "main.css": "/static/css/main.46b29ac5.css",
+    "main.js": "/static/js/main.0cd64cc4.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/klienty.png": "/static/media/klienty.97b4fc61c3b3ada13460.png",
     "static/media/vuetify_portfolio.png": "/static/media/vuetify_portfolio.c315cceff3c636328bb6.png",
@@ -20,12 +20,12 @@
     "static/media/tic_tac_toe.png": "/static/media/tic_tac_toe.247edd009078e5edd479.png",
     "index.html": "/index.html",
     "static/media/vuetify.svg": "/static/media/vuetify.cc3f3f7ab2ed8391148aafa66344c91e.svg",
-    "main.25ef8aae.css.map": "/static/css/main.25ef8aae.css.map",
-    "main.2de84571.js.map": "/static/js/main.2de84571.js.map",
+    "main.46b29ac5.css.map": "/static/css/main.46b29ac5.css.map",
+    "main.0cd64cc4.js.map": "/static/js/main.0cd64cc4.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.25ef8aae.css",
-    "static/js/main.2de84571.js"
+    "static/css/main.46b29ac5.css",
+    "static/js/main.0cd64cc4.js"
   ]
 }
