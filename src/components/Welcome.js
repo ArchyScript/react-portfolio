@@ -1,14 +1,14 @@
 import React from 'react'
+import script from '../assets/script.jpg'
 
 const Welcome = () => {
   return (
     <section>
       {/* mobile view */}
       <div
-        className="block md:hidden bg-opacity-50"
+        className="block md:hidden bg-opacity-60"
         style={{
-          backgroundImage:
-            "url('https://images.pexels.com/photos/34153/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350')",
+          backgroundImage: `url(${script})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -22,10 +22,12 @@ const Welcome = () => {
             </h1>
 
             <p className=" text-base text-gray-700 mt-4 sm:mt-5 w-5/6  sm:max-w-xl mx-auto">
-              I'm a Front End Developer I'm a web developer with a focus on the
-              MERN and MEVN stack, but still exploring other technologies and
-              frameworks that catch my interest! if you're looking for a
-              developer to add to your team, I'd love to hear from you!
+              I'm a Front End Developer with a focus on
+              <strong> MEVN (Mongodb Express Vue Node) </strong> and{' '}
+              <strong>MERN (Mongodb Express React Node)</strong> stack, but
+              still exploring other technologies and frameworks that catches my
+              <br />
+              interest! I'd love to hear from you!
             </p>
 
             <div className="mt-5 sm:mt-8 flex justify-center">
@@ -57,10 +59,12 @@ const Welcome = () => {
               </h1>
 
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:text-2xl lg:mx-0">
-                I'm a Front End Developer I'm a web developer with a focus on
-                the MERN stack, but still exploring other technologies and
-                frameworks that catch my interest! if you're looking for a
-                developer to add to your team, I'd love to hear from you!
+                I'm a Front End Developer with a focus on
+                <strong> MEVN (Mongodb Express Vue Node) </strong> and{' '}
+                <strong>MERN (Mongodb Express React Node)</strong> stack, but
+                still exploring other technologies and frameworks that catches
+                <br />
+                my interest! I'd love to hear from you!
               </p>
 
               <div className="mt-5 sm:mt-8 sm:flex justify-start">
@@ -80,8 +84,7 @@ const Welcome = () => {
 
           <div
             style={{
-              backgroundImage:
-                "url('https://media.istockphoto.com/photos/portrait-of-a-man-using-a-computer-in-a-modern-office-picture-id1344688156?k=20&m=1344688156&s=612x612&w=0&h=KXhmbh-u9uw_HLDUTiDTT36_75qkwnpjGN725w58IvU=')",
+              backgroundImage: `url(${script})`,
               backgroundPosition: 'center',
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',

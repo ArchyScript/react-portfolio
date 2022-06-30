@@ -1,4 +1,5 @@
 import React from 'react'
+import archyscript from '../assets/archyscript.jpg'
 
 const About = () => {
   return (
@@ -16,8 +17,7 @@ const About = () => {
         <div className="grid gap-6 lg:gap-12 grid-cols-2  container px-4 sm:px-10">
           <div
             style={{
-              backgroundImage:
-                "url('https://media.istockphoto.com/photos/portrait-of-a-man-using-a-computer-in-a-modern-office-picture-id1344688156?k=20&m=1344688156&s=612x612&w=0&h=KXhmbh-u9uw_HLDUTiDTT36_75qkwnpjGN725w58IvU=')",
+              backgroundImage: `url(${archyscript})`,
               backgroundPosition: 'center',
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',

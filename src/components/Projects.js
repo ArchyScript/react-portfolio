@@ -1,8 +1,8 @@
 import React from 'react'
 import { projects } from '../db/db'
-
 import { Link } from 'react-router-dom'
 
+//
 const Projects = () => {
   return (
     <section id="projects" className="bg-white py-32 shadow-md">
@@ -12,6 +12,7 @@ const Projects = () => {
             <span className="block text-indigo-600  pt-2 sm:pt-4 ">
               Projects
             </span>
+
             <span className="absolute w-2/5 left-0 top-0 h-1 sm:h-2  rounded-xl bg-indigo-600 "></span>
           </h1>
         </div>

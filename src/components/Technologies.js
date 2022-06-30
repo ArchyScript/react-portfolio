@@ -15,10 +15,10 @@ const Technologies = () => {
         </div>
 
         <div className="w-full md:w-3/4  mx-auto flex flex-col space-y-2 my-8">
-          <p className=" text-base text-center text-gray-700 sm:text-xl  sm:mx-auto  md:text-xl lg:text-2xl lg:mx-0">
-            I'm <strong>proficient</strong> in HTML, CSS, JavaScript, Vue JS,
-            React JS Nuxt JS, Vuetify, Tailwind CSS, Bootstrap and other modern
-            libraries and frameworks
+          <p className=" text-base text-center text-gray-700 sm:text-xl  sm:mx-auto  md:text-xl lg:text-2xl lg:mx-0 font-normal">
+            I'm proficient in HTML, CSS, JavaScript, Vue JS, React JS Nuxt JS,
+            Vuetify, Tailwind CSS, Bootstrap and other modern libraries and
+            frameworks
           </p>
 
           <p className=" text-base text-center text-gray-700  sm:text-xl  sm:mx-auto  md:text-xl lg:text-2xl lg:mx-0">
@@ -43,7 +43,7 @@ const Technologies = () => {
             </div>
 
             <div className="flex-1 md:self-start lg:flex-1 space-y-2">
-              <p className="text-sm sm:text-lg lg:text-xl font-semibold text-gray-800">
+              <p className="text-sm sm:text-lg lg:text-xl font-bold text-gray-700">
                 {languagesAndFramework.title}
               </p>
 

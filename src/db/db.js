@@ -62,7 +62,7 @@ export const languagesAndFrameworks = [
   {
     image_link: react,
     title: 'React JS',
-    rating: 5,
+    rating: 4,
   },
   {
     image_link: html,
@@ -82,7 +82,7 @@ export const languagesAndFrameworks = [
   {
     image_link: ts,
     title: 'Typescript',
-    rating: 3,
+    rating: 4,
   },
   {
     image_link: bootstrap,
