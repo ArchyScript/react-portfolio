@@ -22,12 +22,11 @@ const Welcome = () => {
             </h1>
 
             <p className=" text-base text-gray-700 mt-4 sm:mt-5 w-5/6  sm:max-w-xl mx-auto">
-              I'm a Front End Developer with a focus on
+              I am a Front End Developer with a focus on
               <strong> MEVN (Mongodb Express Vue Node) </strong> and{' '}
-              <strong>MERN (Mongodb Express React Node)</strong> stack, but
-              still exploring other technologies and frameworks that catches my
-              <br />
-              interest! I'd love to hear from you!
+              <strong>MERN (Mongodb Express React Node)</strong> stack
+              <br />T am enthusiastic about the tech space and I love to work
+              with like-minded developers.
             </p>
 
             <div className="mt-5 sm:mt-8 flex justify-center">
@@ -59,12 +58,12 @@ const Welcome = () => {
               </h1>
 
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:text-2xl lg:mx-0">
-                I'm a Front End Developer with a focus on
+                I am a Front End Developer with a focus on
                 <strong> MEVN (Mongodb Express Vue Node) </strong> and{' '}
                 <strong>MERN (Mongodb Express React Node)</strong> stack, but
                 still exploring other technologies and frameworks that catches
                 <br />
-                my interest! I'd love to hear from you!
+                my interest! I would love to hear from you!
               </p>
 
               <div className="mt-5 sm:mt-8 sm:flex justify-start">
