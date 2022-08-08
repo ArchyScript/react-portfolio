@@ -13,6 +13,7 @@ import node from '../assets/node.jpeg'
 import mongodb from '../assets/mongodb.png'
 
 // projects images
+import architecture_hub from '../assets/project_images/architecture_hub.png'
 import react_portfolio from '../assets/project_images/react_portfolio.png'
 import vuetify_portfolio from '../assets/project_images/vuetify_portfolio.png'
 import klienty from '../assets/project_images/klienty.png'
@@ -40,12 +41,12 @@ export const techs = [
   // { title: 'HTML' },
   // { title: 'CSS' },
   { title: 'Javascript' },
-  { title: 'Nuxt JS' },
-  { title: 'Vuetify' },
   { title: 'Typescript' },
+  { title: 'Nuxt JS' },
+  { title: 'Node JS' },
+  { title: 'Vuetify' },
   { title: 'Tailwind' },
   { title: 'Bootstrap' },
-  // { title: 'Node JS' },
 ]
 
 export const languagesAndFrameworks = [
@@ -112,6 +113,29 @@ export const languagesAndFrameworks = [
 ]
 
 export const projects = [
+  {
+    title: 'Architecture Hub',
+    description: `A fullstack website to connect architecture student across the globe, share latest update and be creative as a team`,
+    image_details: {
+      title: architecture_hub,
+    },
+    techs: [
+      'Vue JS',
+      'VueX',
+      'Typescript',
+      'Tailwind',
+      'Node JS',
+      'MongoDB',
+      'Express',
+      'Cloudinary',
+    ],
+    links: {
+      github: 'https://github.com/ArchyScript/Architecture-Hub',
+      netlify: 'https://architecture-hub.netlify.app/',
+    },
+    is_client_project: false,
+    is_active: true,
+  },
   {
     title: 'Portfolio Project',
     description: `A Portfolio project that`,

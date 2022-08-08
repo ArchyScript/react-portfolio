@@ -43,7 +43,7 @@ const About = () => {
               <p className="mt-2 text-base text-gray-700 sm:mt-3 sm:text-xl lg:text-2xl lg:mx-0">
                 I am a web developer focused on both MEVN and MERN stack, but
                 still exploring other technologies and frameworks that is is
-                related to my field of interest!
+                related to my field of interest
               </p>
 
               <p className="mt-2 text-base text-gray-700 sm:mt-3 sm:text-xl lg:text-2xl lg:mx-0">
@@ -53,7 +53,7 @@ const About = () => {
 
               <p className="mt-2 text-base text-gray-700 sm:mt-3 sm:text-xl lg:text-2xl lg:mx-0">
                 I would love to work with your team and help bring ideas to
-                reality!
+                reality.
               </p>
 
               <p className="mt-2 text-base text-gray-700 sm:mt-3 sm:text-xl lg:text-2xl lg:mx-0">
