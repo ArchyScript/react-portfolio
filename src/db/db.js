@@ -18,6 +18,7 @@ import react_portfolio from '../assets/project_images/react_portfolio.png'
 import vuetify_portfolio from '../assets/project_images/vuetify_portfolio.png'
 import klienty from '../assets/project_images/klienty.png'
 import netrepeneurs from '../assets/project_images/netrepeneurs.png'
+import castng from '../assets/project_images/castng.png'
 import stranerd from '../assets/project_images/stranerd.png'
 import tic_tac_toe from '../assets/project_images/tic_tac_toe.png'
 import typing_game from '../assets/project_images/typing_game.png'
@@ -193,21 +194,6 @@ export const projects = [
     is_active: true,
   },
   // {
-  //   title: 'Random Websites Landing Pages',
-  //   description: `Javascript`,
-  //   image_details: {
-  //     title:
-  //       'https://unbounce.com/photos/1.2_Marketingfunnel-scaled-1.webp' || '',
-  //   },
-  //   techs: ['Vue JS', 'Vuetify', 'Typescript', 'Tailwind'],
-  //   links: {
-  //     github: 'https://github.com/ArchyScript/Random-Website-Landing-Pages',
-  //     netlify: 'https://archyscript-landing-pages.netlify.app/',
-  //   },
-  //   is_client_project: false,
-  //   is_active: true,
-  // },
-  // {
   //   title: 'Architecture Hub',
   //   description: `A website to connect all architecture students, allows them share projects together, work on team projects as a team and do other interesting things together.`,
   //   image_details: {
@@ -247,6 +233,20 @@ export const projects = [
     links: {
       github: 'https://github.com/ArchyScript/simple_responsive_dashboard',
       netlify: 'https://simple-responsive-dashboard.netlify.app/',
+    },
+    is_client_project: false,
+    is_active: true,
+  },
+  {
+    title: 'Cast NG',
+    description: ` `,
+    image_details: {
+      title: castng,
+    },
+    techs: ['HTML', 'CSS', 'Javascript', 'Tailwind'],
+    links: {
+      github: 'https://github.com/ArchyScript/CastNG',
+      netlify: 'https://archyscript-castng-clone.netlify.app/',
     },
     is_client_project: false,
     is_active: true,
