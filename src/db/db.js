@@ -20,6 +20,7 @@ import klienty from '../assets/project_images/klienty.png'
 import netrepeneurs from '../assets/project_images/netrepeneurs.png'
 import castng from '../assets/project_images/castng.png'
 import stranerd from '../assets/project_images/stranerd.png'
+import cowrywise_clone from '../assets/project_images/cowrywise_clone.png'
 import tic_tac_toe from '../assets/project_images/tic_tac_toe.png'
 import typing_game from '../assets/project_images/typing_game.png'
 import quote_generator from '../assets/project_images/quote_generator.png'
@@ -219,6 +220,20 @@ export const projects = [
       github:
         'https://github.com/ArchyScript/stranerd-landing-page/tree/master',
       netlify: 'https://archyscript-stranerd-lading-page.netlify.app/study',
+    },
+    is_client_project: false,
+    is_active: true,
+  },
+  {
+    title: 'Cowrywise Clone',
+    description: `Cowrywise is a savings and investment platform developed to equip individuals with the required tools to make personal financial management a lifestyle. `,
+    image_details: {
+      title: cowrywise_clone,
+    },
+    techs: ['Nuxt JS', 'Tailwind'],
+    links: {
+      github: 'https://github.com/ArchyScript/cowrywise-clone.git',
+      netlify: 'https://cowrywise-clone.netlify.app/',
     },
     is_client_project: false,
     is_active: true,
