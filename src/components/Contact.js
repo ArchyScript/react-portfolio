@@ -19,7 +19,7 @@ const Contact = () => {
     setTimeout(() => {
       setMessageAndStatus({
         is_success: false,
-        message: '', 
+        message: '',
       })
     }, 4000)
 
@@ -33,7 +33,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault()
 
-    let regexEmail = '/^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/'
+    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     let fullname = document.getElementById('fullname').value
     let email = document.getElementById('email').value
     let message = document.getElementById('message').value
@@ -53,6 +53,7 @@ const Contact = () => {
       })
       return setErrorTimeout()
     }
+
     if (message.length <= 10) {
       setMessageAndStatus({
         is_success: false,
@@ -127,7 +128,7 @@ const Contact = () => {
             </span>
             <div className="p-1 mb-3">
               <label className="block mb-2 mx-2  text-base text-left  sm:text-lg font-semibold text-gray-600">
-                Fullname{' '}
+                Full Name{' '}
               </label>
               <input
                 id="fullname"
@@ -135,6 +136,7 @@ const Contact = () => {
                 className="block border border-gray-200 rounded-xl w-full py-4 px-6  outline-none"
                 name="user_fullname"
                 placeholder="Fullname"
+                required
               />
             </div>
 
@@ -148,6 +150,7 @@ const Contact = () => {
                 className="block border border-gray-200 rounded-xl w-full py-4 px-6  outline-none"
                 name="user_email"
                 placeholder="Email"
+                required
               />
             </div>
 
@@ -161,6 +164,7 @@ const Contact = () => {
                   name="message"
                   className="block border border-gray-200 py-4 px-6  outline-none rounded-lg resize-none w-full h-full"
                   placeholder="Please send a message..."
+                  required
                 ></textarea>
               </div>
             </div>
