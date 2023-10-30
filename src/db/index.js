@@ -1,54 +1,29 @@
-// Technologies images
-import ts from '../assets/ts.png'
-import js from '../assets/js.png'
-import css from '../assets/css.png'
-import bootstrap from '../assets/bootstrap.png'
-import express from '../assets/expressjs.png'
-import html from '../assets/html.png'
-import react from '../assets/react.png'
-import vue from '../assets/vue.png'
-import vuetify from '../assets/vuetify.svg'
-import tailwind from '../assets/tailwind.png'
-import node from '../assets/node.jpeg'
-import mongodb from '../assets/mongodb.png'
-
-// projects images
-import architecture_hub from '../assets/project_images/architecture_hub.png'
-import react_portfolio from '../assets/project_images/react_portfolio.png'
-import vuetify_portfolio from '../assets/project_images/vuetify_portfolio.png'
-import klienty from '../assets/project_images/klienty.png'
-import netrepeneurs from '../assets/project_images/netrepeneurs.png'
-import castng from '../assets/project_images/castng.png'
-import stranerd from '../assets/project_images/stranerd.png'
-import cowrywise_clone from '../assets/project_images/cowrywise_clone.png'
-import tic_tac_toe from '../assets/project_images/tic_tac_toe.png'
-import typing_game from '../assets/project_images/typing_game.png'
-import quote_generator from '../assets/project_images/quote_generator.png'
-import promise_card from '../assets/project_images/promise_card.png'
-import matrix_calculator from '../assets/project_images/matrix_calculator.png'
-import responsive_dashboard from '../assets/project_images/responsive_dashboard.png'
-import simple_calculator from '../assets/project_images/simple_calculator.png'
-import simple_store from '../assets/project_images/simple_store.png'
-import virtual_keyboard from '../assets/project_images/virtual_keyboard.png'
-import length_converter from '../assets/project_images/length_converter.png'
-
-// backend api
-export const projects_api =
-  'https://archyscript-portfolio-api.herokuapp.com/api/projects'
+import {
+  ts, js, css, bootstrap, express, html, react, vue, vuetify, node, mongodb, tailwind,
+  architecture_hub, react_portfolio, vuetify_portfolio, klienty, netrepeneurs, castng, stranerd, cowrywise_clone, tic_tac_toe, typing_game, quote_generator, promise_card, matrix_calculator, responsive_dashboard, simple_calculator, simple_store, virtual_keyboard, length_converter,
+} from '../assets'
 
 export const techs = [
   { title: 'All' },
   { title: 'Vue JS' },
+  { title: 'Nuxt JS' },
   { title: 'React JS' },
-  // { title: 'HTML' },
-  // { title: 'CSS' },
   { title: 'Javascript' },
   { title: 'Typescript' },
-  { title: 'Nuxt JS' },
-  { title: 'Node JS' },
-  { title: 'Vuetify' },
   { title: 'Tailwind' },
+  { title: 'HTML' },
+  { title: 'CSS' },
+  { title: 'Node JS' },
   { title: 'Bootstrap' },
+  { title: 'Vuetify' },
+]
+
+export const librariesAndFrameworks = [
+  { title: 'All' },
+  { title: 'Languages' },
+  { title: 'Frameworks' },
+  { title: 'Databases' },
+  // { title: 'Tools' },
 ]
 
 export const languagesAndFrameworks = [
@@ -56,63 +31,94 @@ export const languagesAndFrameworks = [
     image_link: js,
     title: 'Javascript',
     rating: 5,
+    category: 'Languages'
   },
   {
     image_link: vue,
     title: 'Vue JS',
     rating: 5,
+    category: 'Frameworks'
   },
   {
     image_link: react,
     title: 'React JS',
-    rating: 4,
-  },
-  {
-    image_link: html,
-    title: 'HTML',
     rating: 5,
-  },
-  {
-    image_link: css,
-    title: 'CSS',
-    rating: 5,
-  },
-  {
-    image_link: tailwind,
-    title: 'Tailwind',
-    rating: 5,
+    category: 'Frameworks'
   },
   {
     image_link: ts,
     title: 'Typescript',
     rating: 4,
+    category: 'Languages'
+  },
+  {
+    image_link: html,
+    title: 'HTML',
+    rating: 5,
+    category: 'Languages'
+  },
+  {
+    image_link: css,
+    title: 'CSS',
+    rating: 5,
+    category: 'Languages'
+  },
+  {
+    image_link: tailwind,
+    title: 'Tailwind',
+    rating: 5,
+    category: 'Frameworks'
   },
   {
     image_link: bootstrap,
     title: 'Bootstrap',
     rating: 5,
+    category: 'Frameworks'
   },
   {
     image_link: vuetify,
     title: 'Vuetify',
     rating: 5,
+    category: 'Frameworks'
   },
   {
     image_link: node,
     title: 'Node JS',
     rating: 4,
+    category: 'Frameworks'
   },
   {
     image_link: mongodb,
     title: 'Mongodb',
     rating: 5,
+    category: 'Databases'
   },
   {
     image_link: express,
     title: 'Express',
     rating: 4,
+    category: 'Frameworks'
   },
+  // {
+  //   image_link: express,
+  //   title: 'Express',
+  //   rating: 4,
+  //   category: 'Frameworks'
+  // },
+  // {
+  //   image_link: express,
+  //   title: 'Express',
+  //   rating: 4,
+  //   category: 'Frameworks'
+  // },
+  // {
+  //   image_link: express,
+  //   title: 'Express',
+  //   rating: 4,
+  //   category: 'Frameworks'
+  // },
 ]
+
 
 export const projects = [
   {
@@ -194,21 +200,6 @@ export const projects = [
     is_client_project: false,
     is_active: true,
   },
-  // {
-  //   title: 'Architecture Hub',
-  //   description: `A website to connect all architecture students, allows them share projects together, work on team projects as a team and do other interesting things together.`,
-  //   image_details: {
-  //     title:
-  //       'https://unbounce.com/photos/1.2_Marketingfunnel-scaled-1.webp' || '',
-  //   },
-  //   techs: ['Vue JS',  'Typescript', 'Tailwind'],
-  //   links: {
-  //     github: 'https://github.com/ArchyScript/Architecture-Hub',
-  //     netlify: 'https://architecture-hub.netlify.app/auth/login',
-  //   },
-  //   is_client_project: false,
-  //   is_active: true,
-  // },
   {
     title: 'Stranerd Study Page',
     description: `An EduTech startup in Nigeria with the aim of making learning easy, convenient and accessible.`,
