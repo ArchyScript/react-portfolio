@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { languagesAndFrameworks, projects } from '../db/db'
+import { languagesAndFrameworks, projects } from '../db'
 
 const Portfolio = () => {
   const [name, setName] = useState(false)
@@ -39,12 +39,12 @@ const Portfolio = () => {
       </div>
 
       <div className="grid gap-12 grid-cols-1 md:grid-cols-2 container rounded-xl">
-        {projects.map((project) =>
+        { projects.map((project) =>
           project.is_client_project ? (
             <div className="border-none shadow-sm hover:shadow-lg flex flex-col  rounded-xl">
               <div className="h-64 w-full">
                 <img
-                  src={project.image_details.avatar}
+                  src={ project.image_details.avatar }
                   alt=""
                   className="bg-gray-300 h-full w-full rounded-tl-xl rounded-tr-xl"
                 />
@@ -53,15 +53,15 @@ const Portfolio = () => {
               <div className="">
                 <div className="flex justify-center flex-col items-center font-semibold text-xl lg:text-2xl mb-8">
                   <span className="block mt-8 mb-4 text-2xl text-gray-700 font-thin">
-                    {project.title}
+                    { project.title }
                   </span>
 
                   <div className="flex items-baseline justify-center  flex-wrap px-6 space-x-1 space-y-1">
-                    {project.techs.map((tech) => (
+                    { project.techs.map((tech) => (
                       <span className="cursor-pointer bg-gray-50 text-gray-700 px-3 py-2 rounded-md text-sm font-medium">
-                        {tech}
+                        { tech }
                       </span>
-                    ))}
+                    )) }
                   </div>
                 </div>
 
@@ -70,7 +70,7 @@ const Portfolio = () => {
                     <a
                       target="_blank"
                       className="hover:underline"
-                      href={project.links.github}
+                      href={ project.links.github }
                     >
                       Github
                     </a>
@@ -78,7 +78,7 @@ const Portfolio = () => {
 
                   <span className="font-semibold text-xl">
                     <a
-                      href={project.links.netlify}
+                      href={ project.links.netlify }
                       className="cursor-pointer text-gray-600 text-base hover:text-black  px-3 py-2 rounded-md  font-medium"
                     >
                       <span className="fab fa-github mr-2"></span>
@@ -91,7 +91,7 @@ const Portfolio = () => {
           ) : (
             ''
           ),
-        )}{' '}
+        ) }{ ' ' }
         {/* {[...Array(allLanguageAndFrameworks)].map((elementInArray, index) => (
           <div className="border-none shadow-sm hover:shadow-xl flex flex-col  rounded-xl">
             <div className="h-64 w-full">
